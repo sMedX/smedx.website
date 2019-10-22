@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Roboto Condensed';
+}
+
+.panel {
+    padding: 110px 110px 0 110px;
+    position: relative;
+}
+
+.panel .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a24157;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.panel .title.hyphen::before {
+    content: "";
+    width: 46px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    left: -110px;
+    top: 10px;
+}
+
+.panel .description {
+    font-size: 30px;
+    font-weight: bold;
+    color: #092344;
+    margin: 54px 0 0 0;
+}
+
+.content-panel, .form {
+    background: #fff;
+}
+
+.content-panel .download-pdf {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ed6a6c;
+    position: absolute;
+    right: 110px;
+    top: 114px;
+    padding-left: 40px;
+    text-decoration: none;
+    background: url("/static/ng/assets/images/ic_pdf_normal.png") left center no-repeat;
+}
+
+.content-panel .download-pdf:hover {
+    background-image: url("/static/ng/assets/images/ic_pdf_active.png");
+}
+
+.application-areas .description {
+    color: #fff;
+}
+
+.application-areas .box-list {
+    margin-top: 5%;
+}
+
+.application-areas .box-list li {
+    width: 210px;
+    height: 231px;
+}
+
+.corner-box {
+    position: relative;
+}
+
+.corner-box.text {
+    padding: 44px 34px 44px 41px;
+}
+
+.corner-box.text .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: none;
+}
+
+.corner-box img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.corner-box.text .corners {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #fff;
+    margin-top: 34px;
+}
+
+.corner-box::before, .corner-box::after, .corner-box .corners::before, .corner-box .corners::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+}
+
+.corner-box::before {
+    left: 0;
+    top: 0;
+    border-left-color: #1f4473;
+    border-top-color: #1f4473;
+}
+
+.corner-box::after {
+    right: 0;
+    top: 0;
+    border-right-color: #1f4473;
+    border-top-color: #1f4473;
+}
+
+.corner-box .corners::before {
+    left: 0;
+    bottom: 0;
+    border-left-color: #1f4473;
+    border-bottom-color: #1f4473;
+}
+
+.corner-box .corners::after {
+    right: 0;
+    bottom: 0;
+    border-right-color: #1f4473;
+    border-bottom-color: #1f4473;
+}
+
+.box-list li {
+    width: 307px;
+    height: 231px;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+.box-list {
+    margin-top: 5%;
+    padding-left: 110px;
+    padding-bottom: 110px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+    .panel {
+        padding: 110px 60px 70px 60px;
+    }
+    .panel .title.hyphen::before {
+        display: none;
+    }
+    .box-list {
+        margin-top: 0;
+        padding-left: 60px;
+    }
+    .box-list li {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .panel {
+        padding: 110px 36px 70px 36px;
+    }
+    .panel .title.hyphen::before {
+        display: none;
+    }
+    .box-list {
+        margin-top: 0;
+        padding-left: 36px;
+    }
+    .box-list li {
+        width: 298px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .panel .title.hyphen::before {
+        display: none;
+    }
+    .panel {
+        padding: 110px 20px 0px 20px;
+    }
+    .application-areas .box-list {
+        margin-top: 0;
+    }
+    .box-list {
+        padding-left: 20px;
+        padding-top: 52px;
+    }
+    .box-list li {
+        width: 281px;
+        height: 231px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .panel {
+        padding: 60px 20px 0px 20px;
+    }
+    .panel .description {
+        display: none;
+    }
+    .box-list {
+        padding-bottom: 60px;
+    }
+    .box-list li {
+        width: calc(100vw - 40px);
+        height: calc((100vw - 40px)*2/3);
+    }
+}

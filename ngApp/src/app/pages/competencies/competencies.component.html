@@ -1,0 +1,35 @@
+<h3 class="breadcrumbs">
+  <a routerLink='' class="breadcrumbs_main">Главная</a>
+  <span class="breadcrumbs_additional"><span>&nbsp;/&nbsp;</span>Наши компетенции</span>
+</h3>
+<!-- <table>
+      <tr *ngFor="let hero of articles; let even = even; let odd = odd" 
+      [ngClass]="{ one: odd, two: even }">
+      <td>{{hero.title}}</td>
+  </tr>
+  </table> -->
+<div class="articles_container">
+  <div *ngFor="let article of articles; let even = even; let odd = odd" [ngClass]="{'dark-plate': even, 'plate': odd}"
+    routerLink="/competencies/{{article.link}}">
+    <div class="controls">
+      <div>
+        <!-- <img id="plugged_brain" src="/static/ng/assets/images/ic_about_brain.png" /> -->
+        <!-- <img [src]="article.coverImage" class="article_cover" alt="" /> -->
+        <div class="article_cover" [style.backgroundImage]="'url('+ article.coverImage +')'" 
+        [style.backgroundPosition]="article.coverPosition"></div>
+      </div>
+      <div class="article_preview">
+        <div class="article_date" [innerHtml]="getDate(article)"></div>
+        <!-- <div class="article_date" [innerHtml]="article.added"></div> -->
+        <!-- <h3 class="title">Почему мы?</h3> -->
+        <h3 class="article_title">{{article.title}}</h3>
+        <!-- <h3 class="about_header">Искуственный интеллект для принятия решений и снижения рисков в оперативном режиме</h3> -->
+        <!-- <p>
+                  Получить по-настоящему хорошие результаты в области ИИ по прежнему трудно, так это требует проведения большого
+                  числа экспериментов. Мы уже прошли этот путь, поэтому с нами быстрее и, в конечном счете, – дешевле.
+                </p> -->
+        <a class="article_details_link" (click)="onSelect(article)">Подробнее</a>
+      </div>
+    </div>
+  </div>
+</div>

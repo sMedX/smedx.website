@@ -1,0 +1,47 @@
+type Article {
+    id: Long!
+    added: DateTime!
+    link: String
+    coverImage: String
+    coverPosition: String
+    title: String
+    body: String
+
+}
+
+type News {
+    id: Long!
+    added: DateTime!
+    link: String
+    coverImage: String
+    coverPosition: String
+    title: String
+    description: String
+    body: String
+    tags: String
+}
+
+type Message {
+    name: String
+    email String
+    body: String
+}
+
+type Query {
+    test: String
+    allArticles: [Article]
+    articleByLink(articleLink: String): Article
+
+    getNews(skip: Int = 0, first: Int = 0): [News]
+    newsByLink(newsLink: String): News
+    getNewsForEditor(newsId: Long!, hash: String!): News
+
+}
+
+type Mutation {
+    sendMessage(name: String, email: String, body: String): Boolean
+
+    updateNews(news: String, hash: String): Boolean
+}
+
+scalar DateTime

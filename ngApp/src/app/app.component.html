@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="page" (window:resize)="onResize($event)">
+  <app-header></app-header>
+  <div id="body-div">
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+  </div>
+  <app-footer></app-footer>  
+</div>

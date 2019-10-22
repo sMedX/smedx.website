@@ -1,0 +1,15 @@
+<div *ngIf="isDataLoaded">
+    <div class="news_opened">
+      <h3 class="breadcrumbs">
+        <a routerLink='' class="breadcrumbs_main">Главная</a>
+        <a routerLink="/newsblog" class="breadcrumbs_main"><span>&nbsp;/&nbsp;</span>Новости</a>
+        <span class="breadcrumbs_additional"><span class="dash">&nbsp;/&nbsp;</span>{{selectedNews.title}}</span>
+      </h3>
+      <img *ngIf="selectedNews.coverImage" [src]="selectedNews.coverImage" alt="" class="news_coverImage" />
+      <div class="news_body">
+        <div class="news_date" [innerHtml]="getDate(selectedNews)"></div>
+        <h3 class="news_title">{{selectedNews.title}}</h3>
+        <div [innerHtml]="prettifyBody(selectedNews.body)" class="body_content"></div>
+      </div>
+    </div>
+  </div>

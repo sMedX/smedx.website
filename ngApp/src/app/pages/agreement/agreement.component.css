@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Roboto Condensed';
+}
+
+.agreement_body {
+    font-family: 'Roboto Condensed Light';
+    padding: 0px 100px 70px 100px;
+    position: relative;
+    /* color: #8491a1; */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 30px;
+
+}
+li {
+    list-style: none;
+}

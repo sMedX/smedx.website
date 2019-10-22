@@ -1,0 +1,37 @@
+<!-- <h3>{{testMessage}}</h3> -->
+
+<h3 class="breadcrumbs-news">
+  <a routerLink='' class="breadcrumbs_main">Главная</a>
+  <span class="breadcrumbs_additional"><span class="dash">&nbsp;/&nbsp;</span>Новости</span>
+</h3>
+
+<div class="panel_news">
+  <div class="news_tiles">
+    <div class="news_tile" *ngFor="let news of allNews" routerLink="/newsblog/{{news.link}}">
+      <div class="news_preview_card">
+        <div *ngIf="checkCover(news.coverImage); then imgBlock else noImgBlock">
+          <!-- {{news.coverImage}} -->
+        </div>
+        <ng-template #imgBlock>
+          <img [src]="news.coverImage" class="news_cover" alt="" />
+        </ng-template>
+        <ng-template #noImgBlock>
+          <div class="news_no_cover_plate">
+            <img src="/static/ng/assets/images/ic_news_empty.png" class="news_no_cover_img" alt="" />
+          </div>
+        </ng-template>
+        <div class="date_added" [innerHtml]="getDate(news)"></div>
+        <h3 class="news_title_preview" [innerHTML]="checkTitleSize(news)">
+          <!-- {{news.title}} -->
+        </h3>
+        <div class="news_description" [innerHTML]="checkSize(news)"></div>
+      </div>
+      
+      <button class="more_button">&#9654;<span class="show_more">Узнать больше</span></button>
+    
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<button (click)="next()" class="next_button">Показать ещё</button>

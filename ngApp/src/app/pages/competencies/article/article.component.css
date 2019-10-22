@@ -1,0 +1,181 @@
+.breadcrumbs {
+    padding-bottom: 60px;
+}
+
+.breadcrumbs_main {
+    font-size: 32px;
+    /* font-weight: bold; */
+    color: #a24157;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 300;
+    text-decoration: none;
+    /* font-family: 'Roboto Condensed'; */
+}
+
+.breadcrumbs_main:hover {
+    color: #ed6a6c;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+.breadcrumbs_additional {
+    font-size: 32px;
+    /* font-weight: bold; */
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 300;
+    text-decoration: none;
+    /* font-family: 'Roboto Condensed'; */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Roboto Condensed';
+}
+
+.article_opened {
+    /* padding: 0 20%; */
+}
+
+.article_coverImage {
+    width: 1140px;
+    padding-bottom: 70px;
+    /* margin: 0px 20px; */
+}
+
+.article_body {
+    /* width: 1000px; */
+    padding: 0px 100px 70px 100px;
+    position: relative;
+    /* color: #8491a1; */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+.article_body a {
+    color: #ed6a6c;
+    text-decoration: none !important;
+}
+
+.article_body a:hover {
+    color: #a24157;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+.article_body img {
+    padding: 10px 0px;
+}
+
+.article_body ul {
+    list-style: none;
+    margin: 20px 20px;
+}
+
+.article_body li::before {
+    color: #a24157 !important;
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -1em;
+    /* Also needed for space (tweak if needed) */
+}
+
+.article_date {
+    font-size: 22px;
+    font-weight: 400;
+    color: #a24157;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.article_title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+    line-height: normal;
+}
+
+@media screen and (max-width: 1024px) {
+    .panel {
+        padding: 110px 60px;
+    }
+    .breadcrumbs {
+        margin-left: 36px;
+    }
+    .article_coverImage {
+        width: 904px;
+        margin: 0 60px;
+    }
+    .article_body {
+        padding: 0px 60px 70px 60px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .panel {
+        padding: 110px 36px;
+    }
+    .breadcrumbs {
+        margin-left: 36px;
+    }
+    .article_coverImage {
+        width: 892px;
+        margin: 0 36px;
+    }
+    .article_body {
+        padding: 0px 36px 70px 36px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .breadcrumbs {
+        margin-left: 20px;
+    }
+    .dash::after {
+        content: "\A";
+        white-space: pre;
+    }
+    .article_coverImage {
+        margin-left: 20px !important;
+        width: 560px !important;
+    }
+    .article_body {
+        padding: 0px 20px 70px 20px;
+    }
+    .article_body img {
+        max-width: 560px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .article_coverImage {
+        margin: 0;
+        margin-left: 20px !important;
+        width: calc(100vw - 40px) !important;
+        padding-bottom: 50px;
+    }
+    .article_body img {
+        max-width: calc(100vw - 40px);
+    }
+}

@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: "Roboto Condensed";
+}
+
+.panel {
+  padding: 110px;
+  position: relative;
+}
+
+.panel .title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #a24157;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.panel .title.hyphen::before {
+  content: "";
+  width: 46px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  left: -110px;
+  top: 10px;
+}
+
+.panel .description {
+  font-size: 30px;
+  font-weight: bold;
+  color: #092344;
+  margin: 54px 0 0 0;
+}
+
+.content-panel,
+.form {
+  background: #fff;
+}
+
+.content-panel .download-pdf {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ed6a6c;
+  position: absolute;
+  right: 110px;
+  top: 114px;
+  padding-left: 40px;
+  text-decoration: none;
+  background: url("/assets/images/ic_pdf_normal.png") left center no-repeat;
+}
+
+.content-panel .download-pdf:hover {
+  background-image: url("/assets/images/ic_pdf_active.png");
+  -webkit-transition: background-image 0.5s ease-out;
+  -moz-transition: background-image 0.5s ease-out;
+  -o-transition: background-image 0.5s ease-out;
+  transition: background-image 0.5s ease-out;
+}
+
+/*  GRID-LIST { */
+
+.grid-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 60px 0 0 0;
+}
+
+.grid-list .grid-list-item {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: row;
+  margin: 60px 0 20px 0;
+}
+
+.grid-list-item .image {
+  flex: 0 0 165px;
+}
+
+.grid-list-item .text h3 {
+  color: #092344;
+  font-size: 40px;
+  /* font-weight: bold; */
+  margin: 0 0 50px 0;
+}
+
+.grid-list-item .text p {
+  font-size: 16px;
+  color: #092344;
+  padding: 0 85px 0 0;
+}
+
+/*  } GRID-LIST */
+
+/*  SHORT-INFO {  */
+
+.short-info-list {
+  display: flex;
+  flex-direction: row;
+  padding-top: 39px;
+}
+
+.short-info-list .short-info {
+  flex: 1 1 33%;
+  cursor: pointer;
+}
+
+.short-info h3 {
+  height: 180px;
+  border-left: 4px solid #3e6186;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+  padding: 41px 0 0 36px;
+}
+
+.short-info h3::before {
+  content: "\2014";
+  display: block;
+}
+
+.short-info p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.88;
+  color: #fff;
+  flex: 1 1 auto;
+}
+
+.short-info .more {
+  border-left: 4px solid #123056;
+  padding: 0 0 0 36px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.short-info .more button {
+  margin: 35px 0 44px 0;
+  width: 43px;
+  /* padding: 12px; */
+  height: 44px !important;
+}
+
+.short-info .more .show_more {
+  padding-left: 12px;
+  display: none;
+}
+
+/* short info hover*/
+
+.short-info-list .short-info:hover {
+  background-color: #ed6a6c;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.short-info-list .short-info:hover button {
+  background-color: #ffffff;
+  padding-left: 12px;
+  width: 200px;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.short-info:hover .more button .arrow {
+  margin-left: 10px;
+}
+.short-info:hover .more button .show_more {
+  display: inline;
+}
+
+.arrow {
+  font-size: 8px;
+  background-image: url("/assets/images/ic_arrow_pink.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 14px 14px 8px 8px;
+}
+
+.proposal_more_button {
+  border: solid 1px #fff;
+  background: #092344;
+  margin-bottom: 44px;
+  height: 44px;
+}
+.proposal_arrow {
+  height: 44px;
+  width: 44px;
+  background-image: url("/assets/images/ic_arrow_pink.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.proposal_more {
+  padding-top: 14px;  
+  padding-right: 50px;  
+  display: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #ed6a6c;
+  cursor: pointer;
+}
+
+.short-info-list .short-info:hover .proposal_more_button {
+  background-color: #ffffff;
+  /* padding-left: 12px; */
+  width: 200px;
+  overflow: hidden;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+.short-info-list .short-info:hover .proposal_arrow {
+    margin: 0;
+}
+
+.short-info-list .short-info:hover .proposal_more {
+  float: right;  
+  display: block;
+}
+
+/*  } SHORT-INFO  */
+
+@media screen and (max-width: 1024px) {
+  .panel {
+    padding: 110px 60px;
+  }
+  .panel .title.hyphen::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .panel {
+    padding: 110px 36px;
+  }
+  .panel .title.hyphen::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .panel .title.hyphen::before {
+    display: none;
+  }
+  .panel {
+    padding: 110px 20px;
+    position: relative;
+  }
+  .short-info-list {
+    flex-direction: column;
+    padding-top: 39px;
+  }
+  .grid-list .grid-list-item {
+    margin-left: 40px;
+    flex: 1 1 33%;
+    display: block;
+  }
+  .grid-list-item .image {
+    flex: 0 0 150px;
+  }
+  .grid-list-item .text p {
+    padding: 0 20px 0 0;
+  }
+  .short-info h3 {
+    height: 130px;
+  }
+  .short-info h3 br {
+    content: " ";
+  }
+  .short-info h3 br:after {
+    content: " ";
+  }
+  .short-info .more {
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .panel {
+    padding: 60px 20px 40px 20px;
+  }
+  .short-info {
+    padding: 0 20px;
+  }
+  .short-info h3 {
+    border-left: none;
+    padding: 0;
+    height: 90px;
+  }
+  .short-info .more {
+    border-left: none;
+    padding: 20px 0 0 0px;
+    height: 240px;
+  }
+  .short-info .more p {
+    height: 140px;
+  }
+  .short-info .more button {
+    margin: 20px 0 20px 0;
+  }
+  .short-info-list .short-info:hover button {
+    width: 170px;
+    padding-left: 0;
+  }
+  .short-info .more p {
+    flex: none;
+  }
+  .content-panel .download-pdf {
+    right: 20px;
+    top: 60px;
+    padding-left: 40px;
+  }
+  .panel .description {
+    display: none;
+  }
+  .grid-list {
+    margin: 0;
+    margin-top: 10px;
+  }
+  .grid-list-item {
+    margin: 0;
+    /* margin-top: 35px; */
+    width: 90vw;
+  }
+  .grid-list-item .image {
+    width: 100px;
+  }
+  .grid-list .grid-list-item {
+    margin: 40px 0 0 0;
+    flex: none;
+  }
+  .grid-list .grid-list-item h3 {
+    margin: 30px 0 15px 0;
+  }
+}

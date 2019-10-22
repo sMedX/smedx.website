@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Roboto Condensed';
+}
+
+.panel {
+    padding: 110px;
+    position: relative;
+}
+
+.panel .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a24157;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.panel .title.hyphen::before {
+    content: "";
+    width: 46px;
+    height: 4px;
+    background: #fff;
+    position: absolute;
+    left: -110px;
+    top: 10px;
+}
+
+.panel .description {
+    font-size: 30px;
+    font-weight: bold;
+    color: #092344;
+    margin: 54px 0 0 0;
+}
+
+.content-panel, .form {
+    background: #fff;
+}
+
+/* TILES { */
+
+.tiles {
+    display: flex;
+    flex-direction: row;
+    margin: 55px 0 0 0;
+}
+
+.tiles .tile {
+    position: relative;
+}
+
+.tiles .big-tile {
+    display: flex;
+    flex-direction: column;
+}
+
+.tile .content {
+    position: absolute;
+    left: 60px;
+    bottom: 60px;
+    color: #fff;
+    width: 350px;
+}
+
+.tile .overlay {
+    background: rgba(37, 69, 104, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.tile .content h3 {
+    font-size: 36px;
+    margin: 0 0 25px 0;
+}
+
+.tile .content p {
+    margin: 0 0 50px 0;
+}
+
+.tile .more {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.tile .more::after {
+    content: "\25b6";
+    padding-left: 20px;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+/* } TILES */
+
+.breadcrumbs_main {
+    font-size: 32px;
+    /* font-weight: bold; */
+    color: #a24157;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 300;
+    text-decoration: none;
+    /* font-family: 'Roboto Condensed'; */
+}
+
+.breadcrumbs_main:hover {
+    color: #ed6a6c;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+.breadcrumbs_additional {
+    font-size: 32px;
+    /* font-weight: bold; */
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 300;
+    text-decoration: none;
+    /* font-family: 'Roboto Condensed'; */
+}

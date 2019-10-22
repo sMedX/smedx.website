@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  background: #092344;
+  font-family: "Roboto Condensed";
+}
+
+button {
+  border: solid 1px #fff;
+  background: #092344;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #ed6a6c;
+  cursor: pointer;
+  padding: 17px 30px 14px 30px;
+}
+
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+button,
+.input-checkbox {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* @media screen and (min-width: 1024px) and (max-width: 1140px) { */
+
+@media screen and (max-width: 1140px) {
+  .site-header,
+  .site-footer {
+    width: 954px;
+    margin: 0 auto;
+  }
+  .site-header .logo {
+    flex: 0 0 500px;
+  }
+  .site-footer {
+    margin: 108px auto 121px auto;
+  }
+  .site-footer .footer-menu {
+    margin: 0 50px;
+  }
+  .site-footer .footer-feedback {
+    flex: 0 0 395px;
+  }
+}

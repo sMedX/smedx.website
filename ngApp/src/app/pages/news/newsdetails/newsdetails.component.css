@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Roboto Condensed';
+}
+
+.breadcrumbs {
+    padding-bottom: 70px;
+}
+
+.breadcrumbs_main {
+    font-size: 32px;
+    /* font-weight: bold; */
+    color: #a24157;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 300;
+    text-decoration: none;
+    /* font-family: 'Roboto Condensed'; */
+}
+
+.breadcrumbs_main:hover {
+    color: #ed6a6c;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+.breadcrumbs_additional {
+    font-size: 32px;
+    /* font-weight: bold; */
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 300;
+    text-decoration: none;
+    /* font-family: 'Roboto Condensed'; */
+}
+
+.news_opened {
+    /* padding: 0 20%; */
+}
+
+.news_coverImage {
+    width: 1140px;
+    /* padding-top: 60px;
+    padding-bottom: 80px; */
+    padding: 0px 0 70px 0;
+    /* margin: 0px 20px; */
+}
+
+.news_body {
+    /* width: 1000px; */
+    font-family: 'Roboto Condensed Light';
+    padding: 0px 100px 70px 100px;
+    position: relative;
+    /* color: #8491a1; */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: lighter;
+    line-height: 30px;
+}
+
+.news_body a {
+    color: #ed6a6c;
+    text-decoration: none !important;
+}
+
+.news_body a:hover {
+    color: #a24157;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+
+.news_body b {
+    color: #fdfdfd;
+    font-weight: 400;
+}
+
+.news_body img {
+    padding: 10px 0px;
+    max-width: 940px;
+}
+
+.news_body ul {
+    list-style: none;
+    margin: 20px 20px;
+}
+
+.news_body li::before {
+    color: #a24157 !important;
+    content: "\2022";
+    /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    font-weight: bold;
+    /* If you want it to be bold */
+    display: inline-block;
+    /* Needed to add space between the bullet and the text */
+    width: 1em;
+    /* Also needed for space (tweak if needed) */
+    margin-left: -1em;
+    /* Also needed for space (tweak if needed) */
+}
+
+.news_date {
+    font-size: 22px;
+    font-weight: 400;
+    color: #a24157;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.news_title {
+    font-size: 42px;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 30px;
+    line-height: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .panel {
+        padding: 110px 0px;
+    }
+    .breadcrumbs {
+        margin-left: 36px;
+    }
+    .news_coverImage {
+        width: 988px;
+        padding: 0px 0px 70px 36px;
+    }
+    .news_body {
+        padding: 0px 36px 70px 36px;
+    }
+    .news_body img {
+        max-width: calc(100vw - 40px);
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .panel {
+        padding: 110px 0px;
+    }
+    .dash::after {
+        content: "\A";
+        white-space: pre;
+    }
+    .breadcrumbs {
+        margin-left: 36px;
+    }
+    .news_coverImage {
+        width: 924px;
+        padding: 0px 0px 70px 0px;
+    }
+    .news_body {
+        padding: 0px 36px 70px 36px;
+    }
+    .news_body img {
+        max-width: calc(100vw - 40px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .breadcrumbs {
+        margin-left: 20px;
+    }
+    .news_coverImage {
+        margin-left: 20px;
+        max-width: 560px;
+    }
+    .news_body {
+        padding: 0px 20px 70px 20px;
+    }
+    .news_title {
+        font-size: 42px;
+        line-height: normal;
+    }
+    .news_body img {
+        max-width: 560px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .breadcrumbs {
+        width: calc(100vw - 40px);
+    }
+    .news_coverImage {
+        width: calc(100vw - 40px);
+        padding-bottom: 40px; 
+    }
+    .news_body img {
+        max-width: calc(100vw - 40px);
+    }
+    .news_title {
+        margin-bottom: 20px;
+    }
+}

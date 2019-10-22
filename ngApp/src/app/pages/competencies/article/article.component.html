@@ -1,0 +1,15 @@
+<div *ngIf="isDataLoaded">
+  <div class="article_opened">
+    <h3 class="breadcrumbs">
+      <a routerLink='' class="breadcrumbs_main">Главная</a>
+      <a routerLink="/competencies" class="breadcrumbs_main"><span class="dash">&nbsp;/&nbsp;</span>Наши компетенции</a>
+      <span class="breadcrumbs_additional"><span class="dash">&nbsp;/&nbsp;</span>{{selectedArticle.title}}</span>
+    </h3>
+    <img [src]="selectedArticle.coverImage" alt="" class="article_coverImage" />
+    <div class="article_body">
+      <div class="article_date" [innerHtml]="getDate(selectedArticle)"></div>
+      <h3 class="article_title">{{selectedArticle.title}}</h3>
+      <div [innerHtml]="prettifyBody(selectedArticle.body)"></div>
+    </div>
+  </div>
+</div>

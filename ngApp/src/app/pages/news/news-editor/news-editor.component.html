@@ -1,0 +1,50 @@
+<h3>News editor</h3>
+
+<span *ngIf="news">
+
+  <div class="row">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">added:</span>
+      </div>
+      <input type="text" style="width:1200px;" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="news.added">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">title:</span>
+      </div>
+      <input type="text" style="width:1200px;" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="news.title">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">cover image:</span>
+      </div>
+      <input type="text" style="width:1200px;" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+        [(ngModel)]="news.coverImage">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">Link:</span>
+      </div>
+      <input type="text" style="width:1200px;" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="news.link">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">description:</span>
+      </div>
+      <textarea class="form-control description" aria-label="With textarea" rows="2" cols="200"
+      [(ngModel)]="news.description"></textarea>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon3">body:</span>
+      </div>
+      <textarea class="form-control body" aria-label="With textarea" rows="65" cols="200"
+                [(ngModel)]="news.body"></textarea>
+    </div>
+    <div class="action btn-group">
+      <button type="button" class="btn btn-success" (click)="update(news)">Update</button>
+      <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+</span>
