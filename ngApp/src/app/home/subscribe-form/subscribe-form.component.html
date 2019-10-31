@@ -5,7 +5,17 @@
       Подпишитесь на рассылку сегодня и узнайте о самом важном первым.
     </div>
     <div class="fields">
-      <form action="http://goodnewssmedxcom.dmsubscribe.ru/" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+      <form>
+        <div class="form-field">
+          <input placeholder="Ваша электронная почта" type="email" [(ngModel)]="form.email" name="email" class="email"
+            id="mce-EMAIL" />
+        </div>
+        <div class="form-field inline">
+          <input type="text" placeholder="Ваше имя" [(ngModel)]="form.name" name="name" />
+          <input type="submit" value="&#9654;" name="subscribe" (click)="submit(form)" />
+        </div>
+      </form>
+      <!-- <form action="http://goodnewssmedxcom.dmsubscribe.ru/" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
         class="validate" target="_blank">
         <input type="hidden" name="list_id" value="19889">
         <input type="hidden" name="no_conf" value="">
@@ -17,7 +27,7 @@
           <input type="text" placeholder="Ваше имя" name="merge_1"/>
           <input type="submit" value="&#9654;" class="submit_btn" name="subscribe" id="mc-embedded-subscribe" />
         </div>
-      </form>
+      </form> -->
     </div>
   </div>
 

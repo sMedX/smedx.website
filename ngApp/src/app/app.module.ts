@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf, Inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -72,4 +72,12 @@ import { NewsEditorComponent } from './pages/news/news-editor/news-editor.compon
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(@Optional() @SkipSelf() @Inject(AppModule) parentModule: AppModule | null) {
+    if (parentModule) {
+      throw new Error(
+        'AppModule has already been loaded.'
+      );
+    }
+  }
+}
