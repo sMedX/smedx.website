@@ -45,6 +45,7 @@
 }
 
 .panel {
+    max-width: 100vw;
     padding: 110px;
     position: relative;
 }
@@ -97,11 +98,11 @@
     flex: 1 1 50%;
 }
 
-.form .form-field {
+/* .form .contact-form-field {
     width: 460px;
-}
+} */
 
-.form .form-field input, .form .form-field textarea {
+.form .contact-form-field input, .form .contact-form-field textarea {
     padding: 23px 21px 22px 21px;
     height: 56px;
     border: solid 1px #1f4473;
@@ -114,12 +115,12 @@
     color: #8491a1;
 }
 
-.form .form-field textarea {
+.form .contact-form-field textarea {
     height: 96px;
     padding: 14px 21px;
 }
 
-.form .form-field input[type='submit'] {
+.form .contact-form-field input[type='submit'] {
     padding: 8px 21px 11px 21px;
     background: #e0666a;
     font-size: 20px;
@@ -130,17 +131,17 @@
     border: 0;
 }
 
-.form .form-field.inline {
+.form .contact-form-field.inline {
     display: flex;
     flex-direction: row;
 }
 
-.form .form-field.inline input[type='submit'] {
+.form .contact-form-field.inline input[type='submit'] {
     flex: 0 0 54px;
     margin-left: 10px;
 }
 
-.form .form-field input[type='submit']:hover {
+.form .contact-form-field input[type='submit']:hover {
     background: #ffffff;
     color: #e0666a;
     border: #e0666a 1px solid;
@@ -179,13 +180,13 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .panel {
         padding: 100px 20px;
     }
-    .form .form-field {
+    /* .form .contact-form-field {
         width: 560px;
-    }
+    } */
     .form .controls {
         display: block;
     }
@@ -201,7 +202,7 @@
     .form .controls .fields {
         margin-top: 25px;
     }
-    .form .form-field {
+    .form .contact-form-field {
         width: calc(100vw - 40px);
     }
     .form .controls {

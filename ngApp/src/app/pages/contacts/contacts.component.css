@@ -238,7 +238,7 @@
     flex: 0 0 50%;
   }
   .form .form-field, .footer-feedback {
-    width: calc(100vw - 60px);
+    width: calc(50vw - 60px);
   }
 }
 
@@ -250,7 +250,7 @@
     margin-left: 36px;
   }
   .form .form-field, .footer-feedback  {
-    width: calc(100vw - 40px);
+    width: calc(50vw - 40px);
   }
 }
 

@@ -6,7 +6,7 @@
     </div>
     <div class="fields">
       <form #contactForm="ngForm" novalidate>
-        <div class="form-field">
+        <div class="contact-form-field">
           <input type="text" placeholder="Ваше имя" name="requester" ngModel required requester />
           <!-- <span ng-show="form.name.$dirty && form.name.$error.required">Name is required</span> -->
           <!-- <div ng-messages="myForm.name.$error" ng-if="myForm.$submitted">
@@ -14,7 +14,7 @@
                     <div ng-message="maxlength">Should be less than 30 chars</div>
                   </div> -->
         </div>
-        <div class="form-field">
+        <div class="contact-form-field">
           <input type="text" placeholder="Ваша электронная почта" type="email" value="" name="email" class="email" id="mce-EMAIL"
             ngModel required email />
           <!-- <span ng-show="form.email.$dirty && form.email.$error.required">Email is required</span> -->
@@ -22,7 +22,7 @@
                     <div ng-message="required">Please valid email address.</div>
                   </div>-->
         </div>
-        <div class="form-field">
+        <div class="contact-form-field">
           <textarea placeholder="Ваше сообщение" type="textarea" name="message" ngModel required message ng-minlength="5"
             style="resize: none;"></textarea>
           <!-- <span ng-show="form.message.$dirty && form.message.$error.required">message is required</span> -->
@@ -31,7 +31,7 @@
                     <div ng-message="maxlength">Should be less than 30 chars</div>
                   </div> -->
         </div>
-        <div class="form-field">
+        <div class="contact-form-field">
           <input type="submit" value="Отправить" name="subscribe" (click)="submit(contactForm)" />
         </div>
       </form>
