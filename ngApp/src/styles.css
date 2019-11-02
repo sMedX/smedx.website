@@ -35,7 +35,7 @@ button,
 
 /* @media screen and (min-width: 1024px) and (max-width: 1140px) { */
 
-@media screen and (max-width: 1140px) {
+/* @media screen and (max-width: 1140px) {
   .site-header,
   .site-footer {
     width: 954px;
@@ -53,4 +53,4 @@ button,
   .site-footer .footer-feedback {
     flex: 0 0 395px;
   }
-}
+} */

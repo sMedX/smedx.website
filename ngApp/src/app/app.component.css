@@ -7,38 +7,6 @@
 }
 
 .page {
-    width: 1140px;
-}
-
-@media screen and (max-width: 1024px) {
-    .page {
-        width: 1024px;
-    }
-}
-
-@media screen and (max-width: 960px) {
-    .page {
-        width: 960px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        outline: 0;
-        font-family: 'Roboto Condensed';
-    }
-    .page {
-        /* border: 3px solid yellow; */
-        /* margin-left: 245px; */
-        width: 600px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .page {
-        width: 100vw;
-    }
+    width: 100vw;
+    max-width: 1140px;
 }

@@ -4,13 +4,20 @@
       <img src="/static/ng/assets/images/ic_logo_header.png" class="logo-image" />
     </a>
   </div>
-  <ul class="site-menu" id="menu">
+ <!--  <ul class="site-menu" id="menu">
     <li *ngFor="let menuItem of menuItems">
       <span *ngIf="menuItem.selected; then selectedBlock; else unselectedBlock"></span>
       <ng-template #selectedBlock><a (click)="selectMenu(menuItem)" class="selectedLi">{{menuItem.title}}</a></ng-template>
       <ng-template #unselectedBlock><a (click)="selectMenu(menuItem)" class="defaultLi">{{menuItem.title}}</a></ng-template>
     </li>
-  </ul>
+  </ul> -->
+  <div class="site-menu" id="menu">
+      <span *ngFor="let menuItem of menuItems">
+        <span *ngIf="menuItem.selected; then selectedBlock; else unselectedBlock"></span>
+        <ng-template #selectedBlock><a (click)="selectMenu(menuItem)" class="selectedLi">{{menuItem.title}}</a></ng-template>
+        <ng-template #unselectedBlock><a (click)="selectMenu(menuItem)" class="defaultLi">{{menuItem.title}}</a></ng-template>
+      </span>
+    </div>
 </header>
 <header class="mobile-header">
   <!-- this is mobile header!!! -->
