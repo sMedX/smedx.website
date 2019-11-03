@@ -10,6 +10,7 @@ body {
 body {
   background: #092344;
   font-family: "Roboto Condensed";
+  margin: 0 20px;
 }
 
 button {

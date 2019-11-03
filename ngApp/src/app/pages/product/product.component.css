@@ -147,6 +147,14 @@
 
 /*  } GRID-LIST */
 
+
+
+@media screen and (max-width: 1140px) {
+    .breadcrumbs {
+        margin: 0 20px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .panel {
         padding: 110px 60px;
