@@ -26,12 +26,12 @@
         </h3>
         <div class="news_description" [innerHTML]="checkSize(news)"></div>
       </div>
-      
+
       <button class="more_button">&#9654;<span class="show_more">Узнать больше</span></button>
-    
+
     </div>
   </div>
 </div>
-<br>
-<br>
-<button (click)="next()" class="next_button">Показать ещё</button>
+<div class="button-container">
+  <div (click)="next()" class="next_button">Показать ещё</div>
+</div>
