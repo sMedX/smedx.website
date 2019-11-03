@@ -1,3 +1,4 @@
 .idea
 /ngApp/node_modules
+/ngApp/static
 /storage

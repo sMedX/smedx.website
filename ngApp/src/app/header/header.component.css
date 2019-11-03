@@ -20,7 +20,8 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.site-header .site-menu span{
+
+.site-header .site-menu span {
     margin-left: 10px;
 }
 
@@ -67,6 +68,15 @@
 
 .mobile-header {
     display: none;
+}
+
+@media screen and (max-width: 1140px) {
+    .site-header {
+        margin: 0 20px;
+    }
+    .line {
+        margin: 0 20px 63px 20px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -125,7 +135,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .site-header {
         display: none;
     }
