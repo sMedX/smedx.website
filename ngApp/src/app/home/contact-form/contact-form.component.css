@@ -6,12 +6,12 @@
     font-family: 'Roboto Condensed';
 }
 
-.panel {
+.contact-panel {
     padding: 110px;
     position: relative;
 }
 
-.panel .title {
+.contact-panel .contact-title {
     font-size: 22px;
     font-weight: bold;
     color: #a24157;
@@ -19,38 +19,28 @@
     position: relative;
 }
 
-.panel .title.hyphen::before {
-    content: "";
-    width: 46px;
-    height: 4px;
-    background: #fff;
-    position: absolute;
-    left: -110px;
-    top: 10px;
-}
-
-.panel .description {
+.contact-panel .description {
     font-size: 30px;
     font-weight: bold;
     color: #092344;
     margin: 54px 0 0 0;
 }
 
-.content-panel, .form {
+.content-contact-panel, .contact-form {
     background: #fff;
 }
 
-.content-panel, .form {
+.content-contact-panel, .contact-form {
     background: #fff;
 }
 
-.panel {
+.contact-panel {
     max-width: 100vw;
     padding: 110px;
     position: relative;
 }
 
-.panel .title {
+.contact-panel .contact-title {
     font-size: 22px;
     font-weight: bold;
     color: #a24157;
@@ -58,7 +48,7 @@
     position: relative;
 }
 
-.panel .title.hyphen::before {
+.contact-panel .contact-title.hyphen::before {
     content: "";
     width: 46px;
     height: 4px;
@@ -68,7 +58,7 @@
     top: 10px;
 }
 
-.panel .description {
+.contact-panel .description {
     font-size: 30px;
     font-weight: bold;
     color: #092344;
@@ -77,16 +67,16 @@
 
 /*  FORMS {  */
 
-.form {
+.contact-form {
     border-top: 5px solid #e0666a;
 }
 
-.form .controls {
+.contact-form .contact-controls {
     display: flex;
     flex-direction: row;
 }
 
-.form .controls .text {
+.contact-form .contact-controls .cnt-text {
     font-size: 42px;
     font-weight: bold;
     color: #092344;
@@ -94,15 +84,15 @@
     padding: 60px 90px 0 0;
 }
 
-.form .controls .fields {
+.contact-form .contact-controls .cnt-fields {
     flex: 1 1 50%;
 }
 
-/* .form .contact-form-field {
+/* .contact-form .contact-form-field {
     width: 460px;
 } */
 
-.form .contact-form-field input, .form .contact-form-field textarea {
+.contact-form .contact-form-field input, .contact-form .contact-form-field textarea {
     padding: 23px 21px 22px 21px;
     height: 56px;
     border: solid 1px #1f4473;
@@ -115,12 +105,12 @@
     color: #8491a1;
 }
 
-.form .contact-form-field textarea {
+.contact-form .contact-form-field textarea {
     height: 96px;
     padding: 14px 21px;
 }
 
-.form .contact-form-field input[type='submit'] {
+.contact-form .contact-form-field input[type='submit'] {
     padding: 8px 21px 11px 21px;
     background: #e0666a;
     font-size: 20px;
@@ -131,17 +121,17 @@
     border: 0;
 }
 
-.form .contact-form-field.inline {
+.contact-form .contact-form-field.inline {
     display: flex;
     flex-direction: row;
 }
 
-.form .contact-form-field.inline input[type='submit'] {
+.contact-form .contact-form-field.inline input[type='submit'] {
     flex: 0 0 54px;
     margin-left: 10px;
 }
 
-.form .contact-form-field input[type='submit']:hover {
+.contact-form .contact-form-field input[type='submit']:hover {
     background: #ffffff;
     color: #e0666a;
     border: #e0666a 1px solid;
@@ -154,58 +144,58 @@
 /*  } FORMS  */
 
 @media screen and (max-width: 1024px) {
-    .panel {
+    .contact-panel {
         padding: 110px 60px;
     }
-    /* .form .controls .text {
+    /* .contact-form .contact-controls .cnt-text {
         padding: 60px 90px 0 0;
     } */
-    .form .controls .fields {
+    .contact-form .contact-controls .cnt-fields {
         margin-top: 60px;
     }
 }
 
 @media screen and (max-width: 960px) {
-    .panel {
+    .contact-panel {
         padding: 110px 35px;
     }
-    .form .controls .text {
+    .contact-form .contact-controls .cnt-text {
         padding: 60px 60px 0 0;
     }
-    .form .controls .fields {
+    .contact-form .contact-controls .cnt-fields {
         flex: 1 1 50%;
     }
-    .form .controls .fields {
+    .contact-form .contact-controls .cnt-fields {
         margin-top: 60px;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .panel {
+    .contact-panel {
         padding: 100px 20px;
     }
-    /* .form .contact-form-field {
+    /* .contact-form .contact-form-field {
         width: 560px;
     } */
-    .form .controls {
+    .contact-form .contact-controls {
         display: block;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .panel {
+    .contact-panel {
         padding: 60px 20px;
     }
-    .text {
+    .cnt-text {
         display: none;
     }
-    .form .controls .fields {
+    .contact-form .contact-controls .cnt-fields {
         margin-top: 25px;
     }
-    .form .contact-form-field {
+    .contact-form .contact-form-field {
         width: calc(100vw - 40px);
     }
-    .form .controls {
+    .contact-form .contact-controls {
         display: block;
     }
 }
