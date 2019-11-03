@@ -19,7 +19,7 @@
 .presentation {
     height: 732px;
     max-width: 1140px;
-    width: 100vw;
+    width: calc(100vw - 70px);
     /*
     1920: 40vw
     */
@@ -83,6 +83,11 @@ button:hover {
     }
     .title {
         padding: 150px 60px 21px 60px;
+    }
+
+    .presentation {
+        width: calc(100vw - 70px);
+        margin: 0 35px;
     }
     .presentation .sub-title {
         padding: 0 0 0 60px;

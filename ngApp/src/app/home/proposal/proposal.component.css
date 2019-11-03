@@ -36,8 +36,7 @@
   margin: 54px 0 0 0;
 }
 
-.content-panel,
-.form {
+.content-panel, .form {
   background: #fff;
 }
 
@@ -134,7 +133,7 @@
 
 .short-info .more {
   border-left: 4px solid #123056;
-  padding: 0 0 0 36px;
+  padding: 0 36px 0 36px;
   height: 320px;
   display: flex;
   flex-direction: column;
@@ -163,6 +162,7 @@
   transition: background-color 0.5s ease-out;
 }
 
+/*
 .short-info-list .short-info:hover button {
   background-color: #ffffff;
   padding-left: 12px;
@@ -178,9 +178,9 @@
 }
 .short-info:hover .more button .show_more {
   display: inline;
-}
+} */
 
-.arrow {
+/* .arrow {
   font-size: 8px;
   background-image: url("/assets/images/ic_arrow_pink.png");
   background-repeat: no-repeat;
@@ -194,6 +194,7 @@
   margin-bottom: 44px;
   height: 44px;
 }
+
 .proposal_arrow {
   height: 44px;
   width: 44px;
@@ -203,34 +204,65 @@
 }
 
 .proposal_more {
-  padding-top: 14px;  
-  padding-right: 50px;  
+  padding-top: 14px;
+  padding-right: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #ed6a6c;
+  cursor: pointer;
+} */
+
+.proposal_div {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #fff;
+  background: #092344;
+  margin: 0 0px 44px 0px;
+  height: 44px;
+}
+.proposal_more_arrow {
+  height: 44px;
+  width: 44px;
+  background-image: url("/assets/images/ic_arrow_pink.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+.proposal_more_text {
   display: none;
   font-size: 14px;
   font-weight: bold;
   text-align: center;
   color: #ed6a6c;
   cursor: pointer;
+  padding: 14px 0;
+  width: 100%;
 }
 
-.short-info-list .short-info:hover .proposal_more_button {
+.short-info-list .short-info:hover .proposal_div {
   background-color: #ffffff;
-  /* padding-left: 12px; */
-  width: 200px;
+  width: 100%;
   overflow: hidden;
   -webkit-transition: background-color 0.5s ease-out;
   -moz-transition: background-color 0.5s ease-out;
   -o-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
 }
+
+.short-info-list .short-info:hover .proposal_more_text {
+  display: block;
+}
+/* 
 .short-info-list .short-info:hover .proposal_arrow {
-    margin: 0;
+  margin: 0;
 }
 
 .short-info-list .short-info:hover .proposal_more {
-  float: right;  
+  float: right;
   display: block;
-}
+} */
 
 /*  } SHORT-INFO  */
 
@@ -249,6 +281,10 @@
   }
   .panel .title.hyphen::before {
     display: none;
+  }
+
+  .short-info-list .short-info:hover .proposal_more_arrow {
+    display: none; 
   }
 }
 

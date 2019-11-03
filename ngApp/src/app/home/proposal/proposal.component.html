@@ -5,9 +5,16 @@
       <h3>Анализ<br />данных</h3>
       <div class="more">
         <p>Распознавание лиц и эмоций, поиск объектов, автоматическое аннотирование.</p>
-        <div class="proposal_more_button" (click)="download('emotions_wp_2019.pdf')">
+        <!-- <div class="proposal_more_button" (click)="download('emotions_wp_2019.pdf')">
           <div class="proposal_more">Узнать больше</div>
           <div class="proposal_arrow"></div>
+        </div> -->
+
+        <div class="proposal_div" (click)="download('emotions_wp_2019.pdf')">
+          <span class="proposal_more_arrow"></span>
+          <span class="proposal_more_text">
+            Узнать больше
+          </span>
         </div>
       </div>
     </div>
