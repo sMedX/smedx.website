@@ -143,15 +143,6 @@
 }
 
 .box-list {
-    /* margin-top: 5%; */
-}
-
-.box-list li {
-    width: 210px;
-    height: 231px;
-}
-
-.box-list {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -163,6 +154,8 @@
 }
 
 .box-list li {
+    width: calc(100vw - 220px)/5;
+    height: calc(100vw - 220px)/5;
     margin-left: -1px;
     margin-top: -1px;
 }
@@ -172,8 +165,10 @@
 }
 
 .partners .box-list li {
-    width: 231px;
-    height: 231px;
+    width: calc(100vw - 220px)/5;
+    height: calc(100vw - 220px)/5;
+   /*  width: 231px;
+    height: 231px; */
 }
 
 @media screen and (max-width: 1024px) {

@@ -40,29 +40,29 @@
     background: #fff;
 }
 
-.corner-box {
+.partner-entry {
     position: relative;
 }
 
-.corner-box.text {
+.partner-entry.text {
     padding: 44px 34px 44px 41px;
 }
 
-.corner-box.text .title {
+.partner-entry.text .title {
     font-size: 22px;
     font-weight: bold;
     color: #fff;
     text-transform: none;
 }
 
-.corner-box img {
+.partner-entry img {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
-.corner-box.text .corners {
+.partner-entry.text .corners {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.5;
@@ -70,7 +70,7 @@
     margin-top: 34px;
 }
 
-.corner-box::before, .corner-box::after, .corner-box .corners::before, .corner-box .corners::after {
+.partner-entry::before, .partner-entry::after, .partner-entry .corners::before, .partner-entry .corners::after {
     content: "";
     position: absolute;
     width: 30px;
@@ -80,55 +80,49 @@
     border-color: transparent;
 }
 
-.corner-box::before {
+.partner-entry::before {
     left: 0;
     top: 0;
     border-left-color: #1f4473;
     border-top-color: #1f4473;
 }
 
-.corner-box::after {
+.partner-entry::after {
     right: 0;
     top: 0;
     border-right-color: #1f4473;
     border-top-color: #1f4473;
 }
 
-.corner-box .corners::before {
+.partner-entry .corners::before {
     left: 0;
     bottom: 0;
     border-left-color: #1f4473;
     border-bottom-color: #1f4473;
 }
 
-.corner-box .corners::after {
+.partner-entry .corners::after {
     right: 0;
     bottom: 0;
     border-right-color: #1f4473;
     border-bottom-color: #1f4473;
 }
 
-.box-list {
+.partners-list {
     margin-top: 5%;
-}
-
-.box-list li {
-    width: 210px;
-    height: 231px;
-}
-
-.box-list {
     list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.box-list ul {
+.partners-list ul {
     padding-left: -40px !important;
 }
 
-.box-list li {
+.partners-list li {
+    width: calc((100vw - 110px)/6);
+    height: calc((100vw - 110px)/6);
     margin-left: -1px;
     margin-top: -1px;
 }
@@ -137,22 +131,22 @@
     background: #081f3c;
 }
 
-.partners .box-list {
+.partners .partners-list {
     margin-top: 57px;
 }
 
-.partners .box-list li {
-    width: 231px;
-    height: 231px;
+.partner-entry img {
+    max-width: calc(100% - 40px);
+    max-height: calc(100% - 40px);
 }
 
 @media screen and (max-width: 1024px) {
     .panel {
         padding: 110px 60px;
     }
-    .partners .box-list li {
-        width: 225px;
-        height: 225px;
+    .partners .partners-list li {
+        width: calc((100vw - 120px)/4);
+        height: calc((100vw - 120px)/4);
     }
 }
 
@@ -160,9 +154,9 @@
     .panel {
         padding: 110px 36px;
     }
-    .partners .box-list li {
-        width: 220px;
-        height: 220px;
+    .partners .partners-list li {
+        width: calc((100vw - 70px)/4);
+        height: calc((100vw - 70px)/4);
     }
 }
 
@@ -170,13 +164,9 @@
     .panel {
         padding: 110px 20px;
     }
-    .partners .box-list li {
-        width: 140px;
-        height: 140px;
-    }
-    .corner-box img {
-        max-width: 90px;
-        max-height: 90px;
+    .partners .partners-list li {
+        width: calc((100vw - 40px)/4);
+        height: calc((100vw - 40px)/4);
     }
 }
 
@@ -184,7 +174,7 @@
     .panel {
         padding: 60px 20px;
     }
-    .partners .box-list li {
+    .partners .partners-list li {
         width: calc((100vw - 40px)/2);
         height: calc((100vw - 40px)/2);
     }

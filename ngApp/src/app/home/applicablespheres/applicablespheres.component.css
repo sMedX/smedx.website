@@ -60,91 +60,11 @@
     color: #fff;
 }
 
-.application-areas .box-list {
+.application-areas .apl-box-list {
     margin-top: 5%;
 }
 
-.application-areas .box-list li {
-    width: 210px;
-    height: 231px;
-}
-
-.corner-box {
-    position: relative;
-}
-
-.corner-box.text {
-    padding: 44px 34px 44px 41px;
-}
-
-.corner-box.text .title {
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-    text-transform: none;
-}
-
-.corner-box img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.corner-box.text .corners {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.5;
-    color: #fff;
-    margin-top: 34px;
-}
-
-.corner-box::before, .corner-box::after, .corner-box .corners::before, .corner-box .corners::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: transparent;
-}
-
-.corner-box::before {
-    left: 0;
-    top: 0;
-    border-left-color: #1f4473;
-    border-top-color: #1f4473;
-}
-
-.corner-box::after {
-    right: 0;
-    top: 0;
-    border-right-color: #1f4473;
-    border-top-color: #1f4473;
-}
-
-.corner-box .corners::before {
-    left: 0;
-    bottom: 0;
-    border-left-color: #1f4473;
-    border-bottom-color: #1f4473;
-}
-
-.corner-box .corners::after {
-    right: 0;
-    bottom: 0;
-    border-right-color: #1f4473;
-    border-bottom-color: #1f4473;
-}
-
-.box-list li {
-    width: 307px;
-    height: 231px;
-    margin-left: -1px;
-    margin-top: -1px;
-}
-
-.box-list {
+.apl-box-list {
     margin-top: 5%;
     padding-left: 110px;
     padding-bottom: 110px;
@@ -154,6 +74,82 @@
     flex-wrap: wrap;
 }
 
+.apl-box-list li {
+    width: calc((100% - 110px)/3);
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+.apl-corner-box {
+    position: relative;
+}
+
+.apl-corner-box.text {
+    padding: 44px 34px 44px 41px;
+}
+
+.apl-corner-box.text .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: none;
+}
+
+.apl-corner-box img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.apl-corner-box.text .corners {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #fff;
+    margin-top: 34px;
+}
+
+.apl-corner-box::before, .apl-corner-box::after, .apl-corner-box .corners::before, .apl-corner-box .corners::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+}
+
+.apl-corner-box::before {
+    left: 0;
+    top: 0;
+    border-left-color: #1f4473;
+    border-top-color: #1f4473;
+}
+
+.apl-corner-box::after {
+    right: 0;
+    top: 0;
+    border-right-color: #1f4473;
+    border-top-color: #1f4473;
+}
+
+.apl-corner-box .corners::before {
+    left: 0;
+    bottom: 0;
+    border-left-color: #1f4473;
+    border-bottom-color: #1f4473;
+}
+
+.apl-corner-box .corners::after {
+    right: 0;
+    bottom: 0;
+    border-right-color: #1f4473;
+    border-bottom-color: #1f4473;
+}
+
+
+
 @media screen and (max-width: 1024px) {
     .panel {
         padding: 110px 60px 70px 60px;
@@ -161,12 +157,14 @@
     .panel .title.hyphen::before {
         display: none;
     }
-    .box-list {
+    .apl-box-list {
         margin-top: 0;
         padding-left: 60px;
     }
-    .box-list li {
-        width: 300px;
+
+    .apl-box-list li {
+       /*  width: calc((100vw - 120px)/3) */
+        width: calc((100% - 60px)/3);
     }
 }
 
@@ -177,12 +175,12 @@
     .panel .title.hyphen::before {
         display: none;
     }
-    .box-list {
+    .apl-box-list {
         margin-top: 0;
         padding-left: 36px;
     }
-    .box-list li {
-        width: 298px;
+    .apl-box-list li {
+        width: calc((100vw - 70px)/3)
     }
 }
 
@@ -193,16 +191,16 @@
     .panel {
         padding: 110px 20px 0px 20px;
     }
-    .application-areas .box-list {
+    .application-areas .apl-box-list {
         margin-top: 0;
     }
-    .box-list {
+    .apl-box-list {
         padding-left: 20px;
         padding-top: 52px;
     }
-    .box-list li {
-        width: 281px;
-        height: 231px;
+    .apl-box-list li {
+        /* width: 281px;
+        height: 231px; */
     }
 }
 
@@ -213,10 +211,10 @@
     .panel .description {
         display: none;
     }
-    .box-list {
+    .apl-box-list {
         padding-bottom: 60px;
     }
-    .box-list li {
+    .apl-box-list li {
         width: calc(100vw - 40px);
         height: calc((100vw - 40px)*2/3);
     }

@@ -39,7 +39,7 @@ const routes: Routes = [
   { path: 'proposal', component: ProposalComponent },
   { path: 'applicable', component: ApplicablespheresComponent },
   { path: 'subscribe', component: SubscribeFormComponent },
-  { path: 'partners', component: PartnersComponent },
+  { path: 'partners_part', component: PartnersComponent },
 
   // {path: '**', redirectTo: '/main'}, // redirect all unknown routes to main
   // {path: '', redirectTo: '/main'},
